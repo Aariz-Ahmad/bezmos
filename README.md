@@ -1,8 +1,14 @@
 # Bezmos
 
-Bezmos is a Chrome extension for creating and manipulating shapes in Desmos.
+Bezmos is a Chrome extension for creating and manipulating shapes directly in Desmos.
 
 The idea started with a much smaller problem: I like using Desmos to make art.
+
+## Download
+
+**[Download the latest release](https://github.com/Aariz-Ahmad/bezmos/releases/latest)**
+
+Bezmos 1.2 is the first official release and includes the current drawing toolset: lines, Bézier curves, polygons, and ovals.
 
 ## Where it started
 
@@ -28,11 +34,17 @@ So I made a tool to do it for me.
 
 ## What Bezmos does
 
-Bezmos lets you create shapes interactively and then turn those constructions into actual Desmos expressions.
+Bezmos lets you create shapes interactively and turn those constructions into actual Desmos expressions.
 
-What started as a Bézier curve generator has grown into a much broader idea: a tool for expressing things in Desmos that would otherwise be extremely difficult to construct manually.
+The current toolset includes:
 
-It currently supports Bézier curves, polygons, circles and ovals, custom shapes, and filled shapes, with interactive manipulation for many of them.
+* **Lines** for creating line segments
+* **Bézier Curves** for creating smooth cubic curves
+* **Custom Bézier Curves** for curves with a variable number of control points
+* **Polygons** for creating multi-sided shapes
+* **Ovals** with rotation and independent width and height controls
+
+Bezmos also provides construction guides to make positioning and editing shapes easier, along with options for hiding those guides once they're no longer needed.
 
 The long-term idea is to make it possible to create essentially anything that can be represented mathematically in Desmos, without requiring the user to manually construct enormous expressions.
 
@@ -48,6 +60,8 @@ A lot of the shapes are built using temporary expressions while the user is work
 
 This is particularly useful for Bézier curves, where manually substituting every control point into the final equation can become extremely tedious.
 
+Bezmos also uses Desmos `HelperExpression`s for some interactive shape manipulation.
+
 ## Why I made it
 
 Mostly because I wanted it.
@@ -62,13 +76,21 @@ Eventually, those solutions started turning into a tool.
 
 Bezmos is still actively being developed.
 
-Some features are experimental and there are still bugs, particularly around the fill tool. The codebase is also likely to change quite a bit as I continue adding features and figuring out what the tool should actually become.
+The current release is **1.2**, the first official release of the project.
 
-This repository is the current development version.
+Some features are still experimental and there are known bugs. In particular, the **Fill Tool is currently broken** and should not be expected to work reliably. It remains in the project for future development, but it is not part of the functional current toolset.
+
+The current functional toolset is:
+
+**Lines · Bézier Curves · Polygons · Ovals**
+
+Custom Bézier curves are also available through the Bézier tool for more complex curves.
 
 ## Installation
 
-Download or clone the repository, open `chrome://extensions` in Chrome, enable **Developer mode**, click **Load unpacked**, and select the `Bezmos` folder.
+Download the latest release, or clone the repository if you want to use the development version.
+
+To install Bezmos manually, open `chrome://extensions` in Chrome, enable **Developer mode**, click **Load unpacked**, and select the `Bezmos` folder.
 
 Open Desmos and the extension should be available.
 
