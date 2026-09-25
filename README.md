@@ -4,11 +4,16 @@ Bezmos is a Chrome extension for creating and manipulating shapes directly in De
 
 The idea started with a much smaller problem: I like using Desmos to make art.
 
-## Download
+## [Download](https://github.com/Aariz-Ahmad/bezmos/releases/latest)
 
-**[Download the latest release](https://github.com/Aariz-Ahmad/bezmos/releases/latest)**
+Bezmos is currently distributed as an unpacked Chrome extension. Download the latest release, extract the files, then open `chrome://extensions` in Chrome, enable **Developer mode**, click **Load unpacked**, and select the `Bezmos` folder.
 
-Bezmos 1.2 is the first official release and includes the current drawing toolset: lines, Bézier curves, polygons, and ovals.
+Open Desmos and the extension should be available.
+
+**Coming soon:** Bezmos will hopefully be available directly through the Chrome Web Store once I manage to raise the whopping **$5** required to get developer status and permission to publish extensions.
+
+I'm very poor.
+
 
 ## Where it started
 
@@ -22,15 +27,9 @@ That was my first real step beyond the standard functions.
 
 Then I tried to make my own version of what are known as Bézier curves.
 
-I ended up independently stumbling across the **de Casteljau algorithm**: repeatedly interpolating between points, then interpolating between those interpolations, until a single point remained. I later looked it up and discovered that the thing I had been experimenting with was a real and widely-used way of constructing Bézier curves.
+I ended up independently stumbling across the **de Casteljau algorithm**: repeatedly interpolating between points, then interpolating between those interpolations, until a single point remained. I later looked it up and discovered that the thing I had been experimenting with was a real and widely-used way of constructing Bézier curves. The math worked, however the problem was the equations. A Bézier curve with several control points can turn into a huge expression. Unlike my oval equation, where I could set up a few variables and replace them when I was finished, manually substituting every coordinate into a large Bézier expression was ridiculous.
 
-The math worked.
-
-The problem was the equations.
-
-A Bézier curve with several control points can turn into a huge expression. Unlike my oval equation, where I could set up a few variables and replace them when I was finished, manually substituting every coordinate into a large Bézier expression was ridiculous.
-
-So I made a tool to do it for me.
+That initial problem was the catalyst for Bezmos.
 
 ## What Bezmos does
 
@@ -39,16 +38,16 @@ Bezmos lets you create shapes interactively and turn those constructions into ac
 The current toolset includes:
 
 * **Lines** for creating line segments
-* **Bézier Curves** for creating smooth cubic curves
-* **Custom Bézier Curves** for curves with a variable number of control points
+* **Bézier Curves** for creating smooth curves
 * **Polygons** for creating multi-sided shapes
 * **Ovals** with rotation and independent width and height controls
 
-Bezmos also provides construction guides to make positioning and editing shapes easier, along with options for hiding those guides once they're no longer needed.
+The Bézier tool also supports custom curves with a variable number of control points.
 
 The long-term idea is to make it possible to create essentially anything that can be represented mathematically in Desmos, without requiring the user to manually construct enormous expressions.
 
 There are already many impressive examples of mathematical art made in Desmos. I wanted to make the process more interactive, user-friendly, and accessible, rather than requiring people to build everything by hand.
+
 
 ## How it works
 
@@ -83,16 +82,6 @@ Some features are still experimental and there are known bugs. In particular, th
 The current functional toolset is:
 
 **Lines · Bézier Curves · Polygons · Ovals**
-
-Custom Bézier curves are also available through the Bézier tool for more complex curves.
-
-## Installation
-
-Download the latest release, or clone the repository if you want to use the development version.
-
-To install Bezmos manually, open `chrome://extensions` in Chrome, enable **Developer mode**, click **Load unpacked**, and select the `Bezmos` folder.
-
-Open Desmos and the extension should be available.
 
 ## A note on AI
 
